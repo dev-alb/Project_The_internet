@@ -7,6 +7,7 @@ function showParagraph(id) {
         if (count === id) { 
             if (paragraph.className === 'showing') {
                 paragraph.className = 'hidden'
+                
             } else {
                 paragraph.className = 'showing'
             }
