@@ -30,6 +30,7 @@ p {
 }
 
 .container {
+    position: relative;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -75,7 +76,7 @@ p {
     opacity: 1;
 }
 
-button {
+button:not(.white-toggle) {
     border: none;
     outline: none;
     background-color: var(--secondary-light);
@@ -87,8 +88,66 @@ button {
     transition: all .5s;
 }
 
-button:hover {
+button:not(.white-toggle):hover {
     background-color: var(--secondary);
     color: var(--primary);
     cursor: pointer;
+}
+
+.white {
+    background-color: var(--light-1);
+}
+
+.white .container h1 {
+    color: var(--primary-light);
+}
+
+.white .container ul li p {
+    color: var(--primary);
+}
+
+.white-toggle {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    transition: all .5s;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.white-toggle:hover {
+    cursor: pointer;
+}
+
+.white-toggle svg {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transition: .5s all;
+    left: 0;
+    top: 0;
+}
+
+#turn-dark {
+    opacity: 0;
+}
+
+.white #turn-dark {
+    opacity: 1;
+}
+
+.white #turn-white {
+    opacity: 0;
+}
+
+.white-toggle svg {
+    fill: var(--light-1);
+}
+
+.white .white-toggle svg {
+    fill: var(--primary);
 }

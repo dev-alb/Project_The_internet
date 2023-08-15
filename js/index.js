@@ -18,3 +18,7 @@ function showParagraph(id) {
         paragraph = document.getElementById(`paragraph-${count}`)
     }
 }
+
+function changeTheme() {
+    document.getElementsByTagName('body')[0].classList.toggle('white')
+}
